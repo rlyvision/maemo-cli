@@ -1,0 +1,46 @@
+{
+    "manufacturers": [
+        {
+            "id": 1,
+            "name": "Moto",
+            "devices": [
+                {"id": 1, "name": "Droid 3"},
+                {"id": 2, "name": "Droid 4"},
+                {"id": 3, "name": "Droid Bionic"},
+                {"id": 4, "name": "Razr (2011)"}
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Nokia",
+            "devices": [
+                {"id": 1, "name": "Nokia N9"},
+                {"id": 2, "name": "Nokia N900"},
+                {"id": 3, "name": "Nokia N950"}
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Pine64",
+            "devices": [
+                {"id": 1, "name": "PinePhone"},
+                {"id": 2, "name": "DontBeEvil Kit"}
+            ]
+        },
+        {
+            "id": 4,
+            "name": "VM",
+            "devices": [
+                {"id": 1, "name": "Virtual Box"},
+                {"id": 2, "name": "QEMU"}
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Generic",
+            "devices": [
+                {"id": 1, "name": "Arm64"}
+            ]
+        }
+    ]
+}
