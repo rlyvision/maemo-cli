@@ -3,11 +3,13 @@ import json
 import os
 import subprocess
 import sys
+import pathlib
 import os
 
 DATA_FILE = "/tmp/maemo_selected_device.txt"
-
-with open('data.json', 'r') as file:
+py_path = pathlib.Path(__file__).resolve()
+py_dir = py_path.parent
+with open(f'{py_dir}/data.json', 'r') as file:
     data = json.load(file)
 
 
@@ -109,7 +111,7 @@ def select():
 
 def install():
     if not os.path.exists(DATA_FILE):
-        print("No device selected. Run `init` first.")
+        print("No device selected. Run `select` first.")
         sys.exit(1)
 
     # Load saved selection
@@ -124,7 +126,7 @@ def install():
     device_id = selected["device_id"]
 
     # Build script path based on IDs
-    script_path = f"scripts/{manufacturer_id}-{device_id}.sh"
+    script_path = f"{py_dir}/scripts/{manufacturer_id}-{device_id}.sh"
 
     if not os.path.isfile(script_path):
         print(f"Install script not found: {script_path}")
