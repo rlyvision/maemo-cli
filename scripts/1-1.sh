@@ -110,3 +110,6 @@ xz -dc "$IMAGE" | dd of="$DEVICE" bs=4M status=progress conv=fsync
 
 sync
 echo "SD card write complete."
+echo "Cleaning up temporary files..."
+rm -rf "$TMP"
+echo "Done."
