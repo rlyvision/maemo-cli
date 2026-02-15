@@ -7,7 +7,7 @@ TMP="/tmp/maemo"
 IMAGE="$TMP/maemo-leste-5.0-armhf-n900-20251228.img.xz"
 TOOLS="$TMP/tools"
 IMAGE_LINK="https://maedevu.maemo.org/images/n900/20251228-daedalus/maemo-leste-5.0-armhf-n900-20251228.img.xz"
-
+mkdir -p /tmp/maemo
 read -rp "Are you on the Nokia N900? (yes/no) " on_n900
 
 if [[ $EUID -ne 0 ]]; then
@@ -104,3 +104,6 @@ if [[ "$configure_choice" == "no" ]]; then
 fi
 
 echo "Run this script again on the N900."
+echo "Cleaning up temporary files..."
+rm -rf "$TMP"
+echo "Done."
