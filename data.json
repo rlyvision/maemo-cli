@@ -14,9 +14,7 @@
             "id": 2,
             "name": "Nokia",
             "devices": [
-                {"id": 1, "name": "Nokia N9"},
-                {"id": 2, "name": "Nokia N900"},
-                {"id": 3, "name": "Nokia N950"}
+                {"id": 1, "name": "Nokia N900"}
             ]
         },
         {
